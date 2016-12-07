@@ -24,6 +24,11 @@ public class Gitter implements Drawable {
         this.gridColor = Color.yellow;
     }
 
+    public Gitter(Gitter g){
+        this(g.getDx(), g.getDy(), g.getGridColor());
+
+    }
+
     public Gitter(int dx, int dy){
         this.dx = dx;
         this.dy = dy;

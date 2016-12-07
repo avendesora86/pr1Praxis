@@ -17,6 +17,7 @@ public class Person {
 	}
 
 	public Person(Person person) {
+
 		this(person.getVorname(), person.getNachname(), person.getGeburtsjahr());
 	}
 	
@@ -29,10 +30,12 @@ public class Person {
 	}
 
 	public String getNachname() {
+
 		return nachname;
 	}
 
 	public int getGeburtsjahr() {
+
 		return geburtsjahr;
 	}
 
@@ -40,7 +43,7 @@ public class Person {
 		return String.format("Person: %1$s %2$s - %3$d", vorname, nachname, geburtsjahr);
 	}
 
-	@Override
+
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
