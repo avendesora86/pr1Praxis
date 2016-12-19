@@ -51,9 +51,9 @@ public class Personen {
 		nachname = dataSource.next();
 		geburtsjahr = dataSource.nextInt();
 
-		Person p;
+//		Person p;
 		if (!(vorname.equals("")) && !(nachname.equals("")) && (geburtsjahr != 0)) {
-			p = new Person(vorname, nachname, geburtsjahr);
+			Person p = new Person(vorname, nachname, geburtsjahr);
 			return p;
 		}
 		return null;

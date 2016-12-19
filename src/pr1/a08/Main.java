@@ -2,9 +2,6 @@ package pr1.a08;
 
 import schimkat.berlin.lernhilfe2016ws.graphics.DirtyPainter;
 
-/**
- * Created by shari on 18.12.2016.
- */
 public class Main {
 
     public static void main(String [] args){

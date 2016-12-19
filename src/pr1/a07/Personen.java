@@ -16,6 +16,7 @@ import java.util.Scanner;
 public class Personen {
 
 	public static void main(String[] args) {
+		PrintWriter out = new PrintWriter(System.out, true);
 		// PersonSet ps = PersonFactory.createTestPersonSet();
 		// for(Person p : ps){
 		// System.out.println(p.toString());
@@ -28,10 +29,10 @@ public class Personen {
 //		persons.forEach(p -> System.out.println(p));
 
 		ArrayList<Person> persons = createTestPersonListe();
-		persons.forEach(p -> System.out.println(p));
+		persons.forEach(p -> out.println(p));
 		persons.sort(new NameComparator());
-		System.out.println();
-		persons.forEach(p -> System.out.println(p));
+		out.println();
+		persons.forEach(p -> out.println(p));
 //		PrintWriter out = new PrintWriter(System.out, true);
 //		 printPersons(createTestPersonListe(), out);
 //		 printPersons(createTestPersonSet(), out);

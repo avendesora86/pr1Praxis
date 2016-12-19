@@ -1,9 +1,5 @@
 package pr1.a06;
 
-import java.io.PrintWriter;
-//import schimkat.berlin.lernhilfe2016ws.objectPlay.Person;
-import pr1.a05.Personen;
-
 public class Person {
 
 	private String vorname;

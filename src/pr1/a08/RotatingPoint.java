@@ -1,13 +1,9 @@
 package pr1.a08;
 
 import schimkat.berlin.lernhilfe2016ws.graphics.Drawable;
+import java.awt.Graphics;
+import java.awt.Point;
 
-import java.awt.*;
-
-
-/**
- * Created by shari on 18.12.2016.
- */
 public class RotatingPoint extends Point implements ChangingWithTime,Drawable {
 
     protected int r;
@@ -62,13 +58,16 @@ public class RotatingPoint extends Point implements ChangingWithTime,Drawable {
         return result;
     }
 
-    @Override
-    public String toString() {
-        return "RotatingPoint{" +
-                "r=" + r +
-                ", timeValue=" + timeValue +
-                '}';
+    public String toString(){
+    	return String.format("RotatingPoint: x: %1$d y:%2$d r: %3$d timeValue: %4$d", x, y, r, timeValue);
     }
+//    @Override
+//    public String toString() {
+//        return "RotatingPoint{" +
+//                "r=" + r +
+//                ", timeValue=" + timeValue +
+//                '}';
+//	  }
 
     @Override
     public void draw(Graphics graphics) {
