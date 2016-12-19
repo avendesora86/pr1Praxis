@@ -9,6 +9,8 @@ public class Main {
         double  timeValue = 0;
         DirtyPainter paint = new DirtyPainter();
         RotatingPoint rp;
+        //ändern: keinen neuen Punkt erzeugen!!!
+        
         while (true){
             rp = new RotatingPoint(100, 100, 50, (long)timeValue);
             paint.add(rp);

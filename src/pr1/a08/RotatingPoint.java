@@ -9,7 +9,7 @@ public class RotatingPoint extends Point implements ChangingWithTime,Drawable {
     protected int r;
     protected long timeValue;
 
-
+//ÄNDERn:formula false MITTELPUNKT!--> watch formula of practise sheet!
     public void changeTimeTo(double timeValue) {
         super.x += r * Math.cos(timeValue);
         super.y += r * Math.sin(timeValue);
@@ -21,12 +21,12 @@ public class RotatingPoint extends Point implements ChangingWithTime,Drawable {
     }
 
     public RotatingPoint(RotatingPoint rp) {
-        this((int)rp.getX(),(int)rp.getY(), rp.getR(), rp.getTimeValue());
+        this(rp.x,rp.y, rp.r, rp.timeValue);
     }
 
     public RotatingPoint(int x, int y, int r, long timeValue) {
-        this.x = x;
-        this.y = y;
+        super.x = x;
+        super.y = y;
         this.r = r;
         this.timeValue = timeValue;
         changeTimeTo(timeValue);
@@ -71,10 +71,10 @@ public class RotatingPoint extends Point implements ChangingWithTime,Drawable {
 
     @Override
     public void draw(Graphics graphics) {
-        graphics.drawOval((int)getX() ,(int)getY(), 5, 5);
+        graphics.drawOval(x ,y , 5, 5);
     }
 
-    public void setTimeValue(long timeValue) {
-        this.timeValue = timeValue;
-    }
+//    public void setTimeValue(long timeValue) {
+//        this.timeValue = timeValue;
+//    }
 }
