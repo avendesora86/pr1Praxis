@@ -8,32 +8,40 @@ import java.util.Random;
  */
 public class Tree extends Plant {
     // properties of Tree (Kronenbreite, -höhe; Blätteranzahl, -breite und -höhe)
-    protected int crownWidth;
-    protected int crownHeight;
-    protected int leafNumber;
-    protected int leafWidth;
-    protected int leafHeight;
+//    protected int crownWidth;
+//    protected int crownHeight;
+//    protected int leafNumber;
+//    protected int leafWidth;
+//    protected int leafHeight;
 
     //complete constructor
-    public Tree(int x, int y, int height, int crownWidth, int crownHeight, int leafHeight, int leafWidth, int leafNumber){
+    public Tree(int x, int y, int height) { //, int crownWidth, int crownHeight, int leafHeight, int leafWidth, int leafNumber){
         //calls the constructor of Plant (superclass) with given parameters
         super(x, y, height, "Baum");
         //initialising  properties with values from parameters
-        this.crownWidth = crownWidth;
-        this.crownHeight = crownHeight;
-        this.leafHeight = leafHeight;
-        this.leafWidth = leafWidth;
-        this.leafNumber = leafNumber;
+//        this.crownWidth = crownWidth;
+//        this.crownHeight = crownHeight;
+//        this.leafHeight = leafHeight;
+//        this.leafWidth = leafWidth;
+//        this.leafNumber = leafNumber;
     }
 
 
     @Override
     public void changeTimeTo(double timeValue) {
+    	height = 3 * timeValue;
+    	nrLeafs = Math.sin(timeValue);
     }
 
     //method draws the Tree
     @Override
     public void draw(Graphics graphics) {
+        int crownWidth = 0.33 * HEIGHT;
+        int crownHeight;
+        int leafNumber;
+        int leafWidth;
+        int leafHeight;
+        
         int topX = this.x;
         int topY = this.y - this.height;
         //drawing the trunk; root at x,y ; trunk always 90 degrees; because the origin is top left corner therefore height has to be substracted of the treeroot.

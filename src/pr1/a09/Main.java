@@ -9,10 +9,12 @@ public class Main {
 
     public static void main (String[] args){
 
-        Tree baum = new Tree(100, 100, 50, 50, 50, 5, 5, 20);
+        Tree baum = new Tree(100, 100, 50);//, 50, 50, 5, 5, 20);
 
         DirtyPainter tree =  new DirtyPainter();
         tree.add(baum);
+        
+        
         tree.showDrawing();
     }
 }
