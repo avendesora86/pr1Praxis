@@ -12,12 +12,14 @@ public abstract class Plant implements Drawable, ChangingWithTime {
     protected int y;
     protected String name;
     protected int height;
+    protected int maxHeight;
 
     public Plant(int x, int y, int height, String name){
         this.x =  x;
         this.y =  y;
         this.height = height;
         this.name = name;
+        this.maxHeight = 2*height;
 
     }
 
