@@ -33,9 +33,9 @@ public class Main {
     }
 
     public static void paintPark(Park p, int i, DirtyPainter paint){
-        paint.remove(p);
+//        paint.remove(p);
         p.changeTimeTo(i);
-        paint.add(p);
+//        paint.add(p);
         paint.showDrawingAfterWaiting(500);
     }
 }
