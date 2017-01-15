@@ -1,6 +1,5 @@
 package pr1.a09;
 
-import pr1.a08.*;
 import schimkat.berlin.lernhilfe2016ws.graphics.Drawable;
 
 import java.awt.*;
