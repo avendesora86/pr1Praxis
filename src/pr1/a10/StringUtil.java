@@ -20,7 +20,7 @@ public class StringUtil {
 
         File file = new File("./data/testfiles/Util.txt");
         System.out.println(getRatioWhitespaceToAll(file));
-
+        System.out.println(getRatioWhitespaceToAll("12 "));
     }
 
 
@@ -58,7 +58,7 @@ public class StringUtil {
                 sum++;
             }
         }
-        double whiteSpaceRatio = sum * 100 / s.length();
+        double whiteSpaceRatio = (double)sum * 100 / (double)s.length();
 
         return whiteSpaceRatio;
     }
